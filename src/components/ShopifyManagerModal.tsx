@@ -102,23 +102,23 @@ export default function ShopifyManagerModal({
             initial={{ opacity: 0, scale: 0.95, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: 20 }}
-            className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[92vw] max-w-2xl bg-[#FDFBF7] text-[#3A2318] z-50 rounded-3xl shadow-2xl border-4 border-[#3A2318] overflow-hidden max-h-[90vh] flex flex-col"
+            className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[92vw] max-w-2xl bg-white text-gray-900 z-50 rounded-2xl shadow-2xl border border-gray-200 overflow-hidden max-h-[90vh] flex flex-col"
           >
             {/* Header */}
-            <div className="bg-[#4A1D6F] text-white p-6 border-b-2 border-[#3A2318] flex items-center justify-between">
+            <div className="bg-[#00853D] text-white p-5 border-b border-gray-100 flex items-center justify-between">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-xl bg-[#95BF47] flex items-center justify-center text-black font-black text-sm">
-                  <Store className="w-6 h-6 text-white" />
+                <div className="w-10 h-10 rounded-xl bg-white/15 flex items-center justify-center text-white font-bold text-sm">
+                  <Store className="w-5 h-5 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-black uppercase tracking-tight flex items-center gap-2">
+                  <h3 className="text-base font-bold tracking-tight flex items-center gap-2">
                     Shopify Integration Center
-                    <span className="text-[10px] bg-[#95BF47] text-black px-2 py-0.5 rounded-full font-black uppercase">
-                      Connected
+                    <span className="text-[10px] bg-amber-400 text-gray-900 px-2 py-0.5 rounded font-bold uppercase">
+                      Live Gateway
                     </span>
                   </h3>
                   <p className="text-xs text-white/80">
-                    Push items to Shopify catalog & route payments exclusively through Shopify Gateway
+                    Push items to Shopify catalog & route checkouts exclusively through Shopify PCI Gateway
                   </p>
                 </div>
               </div>
@@ -126,16 +126,16 @@ export default function ShopifyManagerModal({
                 onClick={onClose}
                 className="w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition"
               >
-                <X className="w-4 h-4" />
+                <X className="w-4 h-4 text-white" />
               </button>
             </div>
 
             {/* Navigation Tabs */}
-            <div className="flex border-b-2 border-[#3A2318] bg-stone-100 text-xs font-black uppercase">
+            <div className="flex border-b border-gray-200 bg-gray-50 text-xs font-bold">
               <button
                 onClick={() => setActiveTab("push")}
-                className={`flex-1 py-3 px-4 border-r border-[#3A2318] flex items-center justify-center gap-2 transition ${
-                  activeTab === "push" ? "bg-[#FFD13B] text-[#3A2318]" : "hover:bg-stone-200"
+                className={`flex-1 py-3 px-4 border-r border-gray-200 flex items-center justify-center gap-2 transition ${
+                  activeTab === "push" ? "bg-white text-[#00853D] border-b-2 border-b-[#00853D]" : "text-gray-600 hover:bg-gray-100"
                 }`}
               >
                 <UploadCloud className="w-4 h-4" />
@@ -143,8 +143,8 @@ export default function ShopifyManagerModal({
               </button>
               <button
                 onClick={() => setActiveTab("gateway")}
-                className={`flex-1 py-3 px-4 border-r border-[#3A2318] flex items-center justify-center gap-2 transition ${
-                  activeTab === "gateway" ? "bg-[#FFD13B] text-[#3A2318]" : "hover:bg-stone-200"
+                className={`flex-1 py-3 px-4 border-r border-gray-200 flex items-center justify-center gap-2 transition ${
+                  activeTab === "gateway" ? "bg-white text-[#00853D] border-b-2 border-b-[#00853D]" : "text-gray-600 hover:bg-gray-100"
                 }`}
               >
                 <ShieldCheck className="w-4 h-4" />
@@ -153,7 +153,7 @@ export default function ShopifyManagerModal({
               <button
                 onClick={() => setActiveTab("settings")}
                 className={`flex-1 py-3 px-4 flex items-center justify-center gap-2 transition ${
-                  activeTab === "settings" ? "bg-[#FFD13B] text-[#3A2318]" : "hover:bg-stone-200"
+                  activeTab === "settings" ? "bg-white text-[#00853D] border-b-2 border-b-[#00853D]" : "text-gray-600 hover:bg-gray-100"
                 }`}
               >
                 <KeyRound className="w-4 h-4" />

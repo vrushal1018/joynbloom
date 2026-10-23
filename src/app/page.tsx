@@ -122,7 +122,7 @@ export default function JoyNbloomFnpLandingPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#F7F7F7] font-sans text-[#222222] selection:bg-[#00853D] selection:text-white">
+    <div className="min-h-screen bg-[#FFFFFF] font-sans text-[#222222] selection:bg-[#7C0E5F] selection:text-white">
       {/* 1. Exact FNP Header (Utility Bar, Location Selector, Search, Actions, Mega Menu) */}
       <FnpHeader
         cart={cart}
@@ -292,7 +292,7 @@ export default function JoyNbloomFnpLandingPage() {
             >
               <div className="flex justify-between items-start border-b border-gray-100 pb-4">
                 <div>
-                  <span className="text-[10px] font-bold uppercase text-[#00853D]">
+                  <span className="text-[10px] font-bold uppercase text-[#7C0E5F]">
                     JoyNbloom Customer Care
                   </span>
                   <h3 className="text-xl font-bold text-gray-900">
@@ -362,7 +362,7 @@ export default function JoyNbloomFnpLandingPage() {
               <div className="pt-4 border-t border-gray-100 flex justify-end">
                 <button
                   onClick={() => setPolicyModal(null)}
-                  className="bg-[#00853D] hover:bg-[#006B31] text-white px-6 py-2 rounded-xl font-bold text-xs uppercase shadow-xs transition"
+                  className="bg-[#7C0E5F] hover:bg-[#5F0B48] text-white px-6 py-2 rounded-xl font-bold text-xs uppercase shadow-xs transition"
                 >
                   Understood
                 </button>

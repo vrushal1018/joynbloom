@@ -154,12 +154,12 @@ export default function FnpHeader({
 
   return (
     <header className="sticky top-0 z-40 bg-white shadow-xs">
-      {/* 1. Top Utility Notification Bar (FNP Signature) */}
-      <div className="bg-[#005B2A] text-white text-[11px] font-medium py-1.5 px-4 md:px-8 border-b border-[#004B22]">
+      {/* 1. Top Utility Notification Bar (JoyNbloom Signature) */}
+      <div className="bg-[#5F0B48] text-white text-[11px] font-medium py-1.5 px-4 md:px-8 border-b border-[#5F0B48]">
         <div className="max-w-7xl mx-auto flex justify-between items-center gap-4">
           <div className="flex items-center gap-4 overflow-x-auto whitespace-nowrap no-scrollbar">
-            <span className="flex items-center gap-1 font-semibold text-[#E4F150]">
-              <Sparkles className="w-3 h-3 text-[#E4F150]" />
+            <span className="flex items-center gap-1 font-semibold text-[#E7C4D9]">
+              <Sparkles className="w-3 h-3 text-[#E7C4D9]" />
               India&apos;s Preferred Online Flower &amp; Gift Store
             </span>
             <span className="hidden lg:inline text-white/40">•</span>
@@ -184,19 +184,19 @@ export default function FnpHeader({
               href="https://wa.me/919833000000"
               target="_blank"
               rel="noreferrer"
-              className="hidden sm:flex items-center gap-1 text-white/90 hover:text-white transition"
+              className="hidden sm:flex items-center gap-1 text-white/90 hover:text-[#E7C4D9] transition"
             >
-              <Phone className="w-3 h-3 text-[#25D366]" />
+              <Phone className="w-3 h-3 text-[#E7C4D9]" />
               <span>Help: +91 98330 00000</span>
             </a>
 
             {/* Shopify Live Store Pill */}
             <button
               onClick={onOpenShopifyModal}
-              className="flex items-center gap-1 bg-[#007A38] hover:bg-[#00853D] text-[#E4F150] text-[10px] font-bold px-2 py-0.5 rounded-full border border-emerald-400/40 transition"
+              className="flex items-center gap-1 bg-[#7C0E5F] hover:bg-[#5F0B48] text-[#E7C4D9] text-[10px] font-bold px-2 py-0.5 rounded-full border border-[#E7C4D9]/40 transition"
               title="Shopify Hosted Storefront Settings"
             >
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+              <span className="w-1.5 h-1.5 rounded-full bg-[#E7C4D9] animate-pulse" />
               <Store className="w-2.5 h-2.5" />
               <span>joynbloom.com Active</span>
             </button>
@@ -204,7 +204,7 @@ export default function FnpHeader({
         </div>
       </div>
 
-      {/* 2. Main Header (FNP Style Logo, Delivery Location, Search, Actions) */}
+      {/* 2. Main Header (Brand Logo, Delivery Location, Search, Actions) */}
       <div className="bg-white border-b border-gray-100 px-4 md:px-8 py-3.5">
         <div className="max-w-7xl mx-auto flex items-center justify-between gap-3 md:gap-6">
           {/* Mobile Menu Button & Brand Logo */}
@@ -217,40 +217,40 @@ export default function FnpHeader({
               {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
             </button>
 
-            {/* FNP Style Brand Logo */}
+            {/* Brand Logo */}
             <a href="#" className="flex items-center gap-2 group">
-              <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-[#00853D] to-[#02A64F] flex items-center justify-center text-white shadow-sm group-hover:scale-105 transition-transform">
+              <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-[#7C0E5F] to-[#A64D8C] flex items-center justify-center text-white shadow-sm group-hover:scale-105 transition-transform">
                 <span className="text-xl">🌸</span>
               </div>
               <div className="flex flex-col">
-                <span className="text-2xl font-black tracking-tight text-[#00853D] leading-none">
+                <span className="text-2xl font-black tracking-tight text-[#7C0E5F] leading-none">
                   JoyNbloom
                 </span>
-                <span className="text-[9px] uppercase tracking-widest font-bold text-amber-700 leading-tight">
+                <span className="text-[9px] uppercase tracking-widest font-bold text-[#A64D8C] leading-tight">
                   Celebrations &amp; Gifts
                 </span>
               </div>
             </a>
           </div>
 
-          {/* Delivery Location Picker Pill (FNP Signature) */}
+          {/* Delivery Location Picker Pill */}
           <button
             onClick={onOpenLocationModal}
-            className="hidden sm:flex items-center gap-2 px-3 py-2 rounded-xl bg-gray-50 hover:bg-[#EBF7EE] border border-gray-200 hover:border-[#00853D] transition text-left group shrink-0"
+            className="hidden sm:flex items-center gap-2 px-3 py-2 rounded-xl bg-gray-50 hover:bg-[#E7C4D9]/20 border border-gray-200 hover:border-[#7C0E5F] transition text-left group shrink-0"
           >
-            <div className="w-7 h-7 rounded-full bg-[#EBF7EE] group-hover:bg-[#00853D] flex items-center justify-center transition">
-              <MapPin className="w-4 h-4 text-[#00853D] group-hover:text-white transition" />
+            <div className="w-7 h-7 rounded-full bg-[#E7C4D9]/40 group-hover:bg-[#7C0E5F] flex items-center justify-center transition">
+              <MapPin className="w-4 h-4 text-[#7C0E5F] group-hover:text-white transition" />
             </div>
             <div className="flex flex-col text-xs leading-tight">
               <span className="text-[10px] text-gray-400 font-semibold uppercase">Deliver to:</span>
               <span className="font-bold text-gray-800 flex items-center gap-1">
                 {deliveryLocation.city} - {deliveryLocation.pincode}
-                <ChevronDown className="w-3 h-3 text-gray-400 group-hover:text-[#00853D]" />
+                <ChevronDown className="w-3 h-3 text-gray-400 group-hover:text-[#7C0E5F]" />
               </span>
             </div>
           </button>
 
-          {/* Centered Pill Search Bar (FNP Signature) */}
+          {/* Centered Pill Search Bar */}
           <div className="relative flex-1 max-w-xl mx-auto">
             <div className="relative flex items-center">
               <input
@@ -265,11 +265,11 @@ export default function FnpHeader({
                   }
                 }}
                 placeholder="Search flowers, cakes, gifts, plant hampers..."
-                className="w-full bg-gray-50 hover:bg-gray-100 focus:bg-white text-xs md:text-sm pl-4 pr-10 py-2.5 rounded-full border border-gray-200 focus:border-[#00853D] focus:ring-1 focus:ring-[#00853D] outline-none transition placeholder:text-gray-400"
+                className="w-full bg-gray-50 hover:bg-gray-100 focus:bg-white text-xs md:text-sm pl-4 pr-10 py-2.5 rounded-full border border-gray-200 focus:border-[#7C0E5F] focus:ring-1 focus:ring-[#7C0E5F] outline-none transition placeholder:text-gray-400"
               />
               <button
                 onClick={onOpenSearch}
-                className="absolute right-1.5 w-7 h-7 rounded-full bg-[#00853D] hover:bg-[#006B31] text-white flex items-center justify-center transition"
+                className="absolute right-1.5 w-7 h-7 rounded-full bg-[#7C0E5F] hover:bg-[#5F0B48] text-white flex items-center justify-center transition"
                 aria-label="Search"
               >
                 <Search className="w-3.5 h-3.5" />
@@ -290,7 +290,7 @@ export default function FnpHeader({
                         setSearchQuery("");
                         onOpenSearch();
                       }}
-                      className="p-2 hover:bg-gray-50 rounded-xl cursor-pointer flex items-center justify-between text-xs transition"
+                      className="p-2 hover:bg-[#E7C4D9]/20 rounded-xl cursor-pointer flex items-center justify-between text-xs transition"
                     >
                       <div className="flex items-center gap-2.5">
                         <div className="relative w-9 h-9 rounded-lg overflow-hidden bg-gray-100 shrink-0">
@@ -303,7 +303,7 @@ export default function FnpHeader({
                           </span>
                         </div>
                       </div>
-                      <span className="text-[11px] font-bold text-[#00853D]">View</span>
+                      <span className="text-[11px] font-bold text-[#7C0E5F]">View</span>
                     </div>
                   ))}
                 </div>
@@ -319,9 +319,9 @@ export default function FnpHeader({
                 const el = document.getElementById("occasions-section");
                 el?.scrollIntoView({ behavior: "smooth" });
               }}
-              className="hidden xl:flex items-center gap-1.5 text-xs font-semibold text-gray-700 hover:text-[#00853D] transition px-2 py-1"
+              className="hidden xl:flex items-center gap-1.5 text-xs font-semibold text-gray-700 hover:text-[#7C0E5F] transition px-2 py-1"
             >
-              <Gift className="w-4 h-4 text-amber-600" />
+              <Gift className="w-4 h-4 text-[#A64D8C]" />
               <span>Corporate</span>
             </button>
 
@@ -329,7 +329,7 @@ export default function FnpHeader({
             <div className="relative">
               <button
                 onClick={() => setAccountMenuOpen(!accountMenuOpen)}
-                className="flex items-center gap-1.5 p-2 rounded-xl text-gray-700 hover:text-[#00853D] hover:bg-gray-50 transition"
+                className="flex items-center gap-1.5 p-2 rounded-xl text-gray-700 hover:text-[#7C0E5F] hover:bg-gray-50 transition"
                 aria-label="User Account"
               >
                 <User className="w-5 h-5" />
@@ -358,7 +358,7 @@ export default function FnpHeader({
                         className="w-full px-4 py-2 text-left hover:bg-gray-50 flex items-center justify-between"
                       >
                         <span>Storefront Settings</span>
-                        <span className="text-[10px] bg-emerald-100 text-emerald-800 px-1.5 py-0.5 rounded font-bold">
+                        <span className="text-[10px] bg-[#E7C4D9]/40 text-[#5F0B48] px-1.5 py-0.5 rounded font-bold">
                           Active
                         </span>
                       </button>
@@ -402,16 +402,16 @@ export default function FnpHeader({
             >
               <Heart className="w-5 h-5" />
               {wishlistCount > 0 && (
-                <span className="absolute top-1 right-1 w-4 h-4 rounded-full bg-rose-600 text-white text-[9px] font-black flex items-center justify-center">
+                <span className="absolute top-1 right-1 w-4 h-4 rounded-full bg-[#7C0E5F] text-white text-[9px] font-black flex items-center justify-center">
                   {wishlistCount}
                 </span>
               )}
             </button>
 
-            {/* Cart Button (FNP Signature: Icon + Badge + Amount) */}
+            {/* Cart Button (Icon + Badge + Amount) */}
             <button
               onClick={onOpenCart}
-              className="flex items-center gap-2.5 bg-[#00853D] hover:bg-[#006B31] text-white px-3.5 py-2 rounded-xl transition shadow-xs group"
+              className="flex items-center gap-2.5 bg-[#7C0E5F] hover:bg-[#5F0B48] text-white px-3.5 py-2 rounded-xl transition shadow-xs group"
               aria-label="Shopping Cart"
             >
               <div className="relative">
@@ -420,7 +420,7 @@ export default function FnpHeader({
                   key={totalCartCount}
                   initial={{ scale: 0.7 }}
                   animate={{ scale: 1 }}
-                  className="absolute -top-2 -right-2 bg-amber-400 text-gray-900 text-[10px] font-black rounded-full w-4 h-4 flex items-center justify-center border border-white"
+                  className="absolute -top-2 -right-2 bg-[#E7C4D9] text-[#5F0B48] text-[10px] font-black rounded-full w-4 h-4 flex items-center justify-center border border-white"
                 >
                   {totalCartCount}
                 </motion.span>
@@ -436,7 +436,7 @@ export default function FnpHeader({
         </div>
       </div>
 
-      {/* 3. Category Navigation Bar with Mega Dropdowns (FNP Style) */}
+      {/* 3. Category Navigation Bar with Mega Dropdowns */}
       <nav className="hidden lg:block bg-white border-b border-gray-200 text-gray-800 text-xs font-semibold">
         <div className="max-w-7xl mx-auto px-8 flex items-center justify-between">
           <ul className="flex items-center space-x-1">
@@ -454,16 +454,16 @@ export default function FnpHeader({
                     const el = document.getElementById("products-section");
                     el?.scrollIntoView({ behavior: "smooth" });
                   }}
-                  className={`flex items-center gap-1.5 py-3 px-3.5 hover:text-[#00853D] border-b-2 transition ${
+                  className={`flex items-center gap-1.5 py-3 px-3.5 hover:text-[#7C0E5F] border-b-2 transition ${
                     activeDropdown === item.id
-                      ? "border-[#00853D] text-[#00853D] bg-[#EBF7EE]/40"
+                      ? "border-[#7C0E5F] text-[#7C0E5F] bg-[#E7C4D9]/20"
                       : "border-transparent"
                   }`}
                 >
                   <span>{item.icon}</span>
                   <span>{item.label}</span>
                   {item.badge && (
-                    <span className="text-[9px] bg-red-500 text-white font-extrabold px-1.5 py-0.2 rounded-full uppercase tracking-tighter">
+                    <span className="text-[9px] bg-[#A64D8C] text-white font-extrabold px-1.5 py-0.2 rounded-full uppercase tracking-tighter">
                       {item.badge}
                     </span>
                   )}
@@ -482,7 +482,7 @@ export default function FnpHeader({
                     >
                       {item.subcategories.map((sub, idx) => (
                         <div key={idx} className="space-y-2">
-                          <h5 className="font-bold text-gray-900 text-xs border-b border-gray-100 pb-1 text-[#00853D]">
+                          <h5 className="font-bold text-gray-900 text-xs border-b border-gray-100 pb-1 text-[#7C0E5F]">
                             {sub.title}
                           </h5>
                           <ul className="space-y-1.5 text-[11px] text-gray-600 font-medium">
@@ -495,7 +495,7 @@ export default function FnpHeader({
                                     const el = document.getElementById("products-section");
                                     el?.scrollIntoView({ behavior: "smooth" });
                                   }}
-                                  className="hover:text-[#00853D] hover:translate-x-1 transition-transform block text-left"
+                                  className="hover:text-[#7C0E5F] hover:translate-x-1 transition-transform block text-left"
                                 >
                                   {subItem}
                                 </button>
@@ -507,7 +507,7 @@ export default function FnpHeader({
 
                       {/* Featured Item Preview */}
                       {item.featuredProduct && (
-                        <div className="bg-[#F8FAF8] rounded-xl p-3 border border-[#E0EAE1] flex flex-col justify-between">
+                        <div className="bg-[#FAF3F7] rounded-xl p-3 border border-[#E7C4D9] flex flex-col justify-between">
                           <div className="relative w-full h-24 rounded-lg overflow-hidden bg-gray-100">
                             <Image
                               src={item.featuredProduct.image}
@@ -515,7 +515,7 @@ export default function FnpHeader({
                               fill
                               className="object-cover"
                             />
-                            <span className="absolute top-1 left-1 bg-[#00853D] text-white text-[9px] font-bold px-1.5 py-0.5 rounded">
+                            <span className="absolute top-1 left-1 bg-[#7C0E5F] text-white text-[9px] font-bold px-1.5 py-0.5 rounded">
                               Featured
                             </span>
                           </div>
@@ -523,7 +523,7 @@ export default function FnpHeader({
                             <p className="text-[11px] font-bold text-gray-900 line-clamp-1">
                               {item.featuredProduct.name}
                             </p>
-                            <p className="text-xs font-black text-[#00853D] mt-0.5">
+                            <p className="text-xs font-black text-[#7C0E5F] mt-0.5">
                               ₹{item.featuredProduct.price}
                             </p>
                           </div>
@@ -537,7 +537,7 @@ export default function FnpHeader({
           </ul>
 
           {/* Quick Promise tag */}
-          <div className="flex items-center gap-1.5 text-[11px] font-semibold text-[#00853D]">
+          <div className="flex items-center gap-1.5 text-[11px] font-semibold text-[#7C0E5F]">
             <Clock className="w-3.5 h-3.5" />
             <span>Earliest Delivery: Today (60 Mins)</span>
           </div>
@@ -566,7 +566,7 @@ export default function FnpHeader({
                 <div className="flex items-center justify-between border-b border-gray-100 pb-3">
                   <div className="flex items-center gap-2">
                     <span className="text-xl">🌸</span>
-                    <span className="text-xl font-black text-[#00853D]">JoyNbloom</span>
+                    <span className="text-xl font-black text-[#7C0E5F]">JoyNbloom</span>
                   </div>
                   <button onClick={() => setMobileMenuOpen(false)}>
                     <X className="w-5 h-5 text-gray-500" />
@@ -582,7 +582,7 @@ export default function FnpHeader({
                   className="w-full flex items-center justify-between p-3 rounded-xl bg-gray-50 border border-gray-200 text-left"
                 >
                   <div className="flex items-center gap-2 text-xs">
-                    <MapPin className="w-4 h-4 text-[#00853D]" />
+                    <MapPin className="w-4 h-4 text-[#7C0E5F]" />
                     <div>
                       <span className="text-[10px] text-gray-500 font-semibold block">Deliver To</span>
                       <span className="font-bold text-gray-800">
@@ -609,14 +609,14 @@ export default function FnpHeader({
                           const el = document.getElementById("products-section");
                           el?.scrollIntoView({ behavior: "smooth" });
                         }}
-                        className="w-full text-left px-3 py-2.5 rounded-lg hover:bg-[#EBF7EE] text-gray-800 hover:text-[#00853D] text-xs font-semibold flex items-center justify-between"
+                        className="w-full text-left px-3 py-2.5 rounded-lg hover:bg-[#E7C4D9]/20 text-gray-800 hover:text-[#7C0E5F] text-xs font-semibold flex items-center justify-between"
                       >
                         <div className="flex items-center gap-2">
                           <span>{item.icon}</span>
                           <span>{item.label}</span>
                         </div>
                         {item.badge && (
-                          <span className="text-[9px] bg-red-500 text-white font-extrabold px-1.5 py-0.5 rounded-full">
+                          <span className="text-[9px] bg-[#A64D8C] text-white font-extrabold px-1.5 py-0.5 rounded-full">
                             {item.badge}
                           </span>
                         )}
@@ -629,7 +629,7 @@ export default function FnpHeader({
               {/* Mobile Drawer Footer */}
               <div className="pt-4 border-t border-gray-100 text-xs space-y-2">
                 <div className="flex items-center gap-2 text-gray-600">
-                  <ShieldCheck className="w-4 h-4 text-[#00853D]" />
+                  <ShieldCheck className="w-4 h-4 text-[#7C0E5F]" />
                   <span>Shopify PCI Secure Payment</span>
                 </div>
                 <p className="text-[11px] text-gray-400">&copy; 2026 JoyNbloom India</p>

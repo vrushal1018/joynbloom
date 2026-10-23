@@ -83,7 +83,7 @@ export default function ProductCarousel({
         {/* Header (FNP Signature) */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
           <div className="space-y-1">
-            <div className="inline-flex items-center gap-1.5 text-xs font-bold text-[#00853D] uppercase tracking-wider">
+            <div className="inline-flex items-center gap-1.5 text-xs font-bold text-[#7C0E5F] uppercase tracking-wider">
               <Sparkles className="w-3.5 h-3.5" />
               <span>Handcrafted Celebration Specials</span>
             </div>
@@ -100,7 +100,7 @@ export default function ProductCarousel({
           </div>
         </div>
 
-        {/* 1. Category Filter Tabs (FNP Signature pill tabs) */}
+        {/* 1. Category Filter Tabs (Pill tabs) */}
         <div className="flex items-center justify-between gap-4 border-b border-gray-200 pb-3 overflow-x-auto no-scrollbar">
           <div className="flex items-center gap-2">
             {CATEGORIES.map((tab) => {
@@ -111,7 +111,7 @@ export default function ProductCarousel({
                   onClick={() => handleCategoryChange(tab.id)}
                   className={`px-4 py-2 rounded-full text-xs font-bold transition shrink-0 ${
                     isSelected
-                      ? "bg-[#00853D] text-white shadow-xs"
+                      ? "bg-[#7C0E5F] text-white shadow-xs"
                       : "bg-white text-gray-700 hover:bg-gray-100 border border-gray-200"
                   }`}
                 >
@@ -134,7 +134,7 @@ export default function ProductCarousel({
                   onClick={() => handleOccasionChange(occ.id)}
                   className={`px-2.5 py-1 rounded-lg text-[11px] font-medium transition ${
                     isSelected
-                      ? "bg-[#EBF7EE] text-[#00853D] font-bold border border-[#00853D]"
+                      ? "bg-[#E7C4D9]/40 text-[#7C0E5F] font-bold border border-[#7C0E5F]"
                       : "bg-white text-gray-600 hover:text-gray-900 border border-gray-200"
                   }`}
                 >
@@ -145,7 +145,7 @@ export default function ProductCarousel({
           </div>
         </div>
 
-        {/* 2. Product Grid (FNP Style Cards) */}
+        {/* 2. Product Grid */}
         {displayedProducts.length === 0 ? (
           <div className="bg-white rounded-2xl p-12 text-center space-y-3 border border-gray-200">
             <p className="text-base font-bold text-gray-800">
@@ -159,7 +159,7 @@ export default function ProductCarousel({
                 handleCategoryChange("All");
                 handleOccasionChange("All");
               }}
-              className="bg-[#00853D] hover:bg-[#006B31] text-white text-xs font-bold px-5 py-2.5 rounded-full uppercase transition"
+              className="bg-[#7C0E5F] hover:bg-[#5F0B48] text-white text-xs font-bold px-5 py-2.5 rounded-full uppercase transition"
             >
               Reset Filters
             </button>

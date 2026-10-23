@@ -23,7 +23,7 @@ export default function RotatingBadge({
       style={{ width: size, height: size }}
     >
       {/* Outer glow ring */}
-      <div className="absolute inset-1 rounded-full bg-[#FFD13B]/30 blur-md pointer-events-none" />
+      <div className="absolute inset-1 rounded-full bg-[#E7C4D9]/40 blur-md pointer-events-none" />
 
       {/* Rotating SVG Text Container */}
       <motion.div
@@ -41,9 +41,9 @@ export default function RotatingBadge({
               d="M 70, 70 m -50, 0 a 50,50 0 1,1 100,0 a 50,50 0 1,1 -100,0"
             />
           </defs>
-          <circle cx="70" cy="70" r="50" fill="#4A1D6F" />
+          <circle cx="70" cy="70" r="50" fill="#5F0B48" />
           <text
-            fill="#FFD13B"
+            fill="#E7C4D9"
             fontSize="8.8"
             fontWeight="900"
             letterSpacing="1.8"
@@ -60,10 +60,10 @@ export default function RotatingBadge({
       <motion.div
         whileHover={{ scale: 1.15, rotate: 15 }}
         whileTap={{ scale: 0.9 }}
-        className="absolute w-12 h-12 rounded-full bg-[#E4F150] border-2 border-[#3A2318] flex items-center justify-center shadow-lg cursor-pointer z-10"
+        className="absolute w-12 h-12 rounded-full bg-[#7C0E5F] border-2 border-white flex items-center justify-center shadow-lg cursor-pointer z-10"
         title="JoyNBloom Celebration Guaranteed!"
       >
-        <Heart className="w-6 h-6 text-[#3A2318] fill-[#3A2318]" />
+        <Heart className="w-6 h-6 text-white fill-white" />
       </motion.div>
     </div>
   );

@@ -52,7 +52,7 @@ export default function FnpSeoSection() {
         <div>
           <button
             onClick={() => setIsExpanded(!isExpanded)}
-            className="text-[#00853D] font-bold inline-flex items-center gap-1 hover:underline text-xs"
+            className="text-[#7C0E5F] font-bold inline-flex items-center gap-1 hover:underline text-xs"
           >
             <span>{isExpanded ? "Read Less" : "Read More About JoyNbloom"}</span>
             <ChevronDown

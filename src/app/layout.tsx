@@ -42,7 +42,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${plusJakarta.variable} scroll-smooth antialiased`}>
-      <body className="min-h-full font-sans bg-[#F7F7F7] text-[#222222]">{children}</body>
+      <body className="min-h-full font-sans bg-[#FFFFFF] text-[#222222]">{children}</body>
     </html>
   );
 }

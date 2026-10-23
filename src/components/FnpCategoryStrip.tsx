@@ -101,8 +101,8 @@ export default function FnpCategoryStrip({
                 <div
                   className={`relative w-18 h-18 sm:w-20 sm:h-20 rounded-full p-1 transition-all duration-300 shadow-xs ${
                     isSelected
-                      ? "ring-3 ring-[#00853D] ring-offset-2 bg-[#EBF7EE]"
-                      : "ring-2 ring-gray-100 group-hover:ring-[#00853D] group-hover:ring-offset-2 bg-gray-50"
+                      ? "ring-3 ring-[#7C0E5F] ring-offset-2 bg-[#E7C4D9]/40"
+                      : "ring-2 ring-gray-100 group-hover:ring-[#7C0E5F] group-hover:ring-offset-2 bg-gray-50"
                   }`}
                 >
                   <div className="relative w-full h-full rounded-full overflow-hidden">
@@ -121,8 +121,8 @@ export default function FnpCategoryStrip({
                   <span
                     className={`block text-xs font-bold leading-tight transition ${
                       isSelected
-                        ? "text-[#00853D]"
-                        : "text-gray-800 group-hover:text-[#00853D]"
+                        ? "text-[#7C0E5F]"
+                        : "text-gray-800 group-hover:text-[#7C0E5F]"
                     }`}
                   >
                     {item.label}

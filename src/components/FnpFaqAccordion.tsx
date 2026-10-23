@@ -38,7 +38,7 @@ export default function FnpFaqAccordion() {
     <section className="py-12 px-4 md:px-8 bg-gray-50/70 border-t border-gray-100">
       <div className="max-w-4xl mx-auto space-y-6">
         <div className="text-center space-y-1.5">
-          <div className="inline-flex items-center gap-1.5 text-xs font-bold text-[#00853D] uppercase tracking-wider">
+          <div className="inline-flex items-center gap-1.5 text-xs font-bold text-[#7C0E5F] uppercase tracking-wider">
             <HelpCircle className="w-3.5 h-3.5" />
             <span>Got Questions?</span>
           </div>
@@ -60,12 +60,12 @@ export default function FnpFaqAccordion() {
               >
                 <button
                   onClick={() => toggle(idx)}
-                  className="w-full px-5 py-4 text-left flex items-center justify-between gap-4 font-bold text-xs sm:text-sm text-gray-800 hover:text-[#00853D] transition"
+                  className="w-full px-5 py-4 text-left flex items-center justify-between gap-4 font-bold text-xs sm:text-sm text-gray-800 hover:text-[#7C0E5F] transition"
                 >
                   <span>{item.q}</span>
                   <ChevronDown
                     className={`w-4 h-4 text-gray-400 shrink-0 transition-transform duration-300 ${
-                      isOpen ? "rotate-180 text-[#00853D]" : ""
+                      isOpen ? "rotate-180 text-[#7C0E5F]" : ""
                     }`}
                   />
                 </button>

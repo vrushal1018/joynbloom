@@ -56,7 +56,7 @@ export default function FnpTestimonials() {
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
           <div>
-            <div className="flex items-center gap-1.5 text-xs font-bold text-[#00853D] uppercase tracking-wider mb-1">
+            <div className="flex items-center gap-1.5 text-xs font-bold text-[#7C0E5F] uppercase tracking-wider mb-1">
               <CheckCircle className="w-3.5 h-3.5" />
               <span>Verified Customer Stories</span>
             </div>
@@ -65,17 +65,17 @@ export default function FnpTestimonials() {
             </h2>
           </div>
 
-          {/* Aggregate Rating Badge (FNP Signature) */}
-          <div className="flex items-center gap-3 bg-[#EBF7EE] border border-[#B4E3C4] px-4 py-2.5 rounded-2xl">
-            <div className="flex items-center gap-1 text-[#00853D]">
+          {/* Aggregate Rating Badge */}
+          <div className="flex items-center gap-3 bg-[#E7C4D9]/30 border border-[#E7C4D9] px-4 py-2.5 rounded-2xl">
+            <div className="flex items-center gap-1 text-[#7C0E5F]">
               <span className="text-2xl font-black">4.9</span>
               <div className="flex">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-4 h-4 fill-[#00853D] text-[#00853D]" />
+                  <Star key={i} className="w-4 h-4 fill-[#7C0E5F] text-[#7C0E5F]" />
                 ))}
               </div>
             </div>
-            <div className="border-l border-emerald-300 pl-3 text-xs text-gray-700">
+            <div className="border-l border-[#A64D8C]/30 pl-3 text-xs text-gray-700">
               <p className="font-bold">India&apos;s Top Rated</p>
               <p className="text-[11px] text-gray-500">1,200+ Verified Reviews</p>
             </div>
@@ -97,7 +97,7 @@ export default function FnpTestimonials() {
                       <Star key={i} className="w-3.5 h-3.5 fill-current" />
                     ))}
                   </div>
-                  <span className="flex items-center gap-1 text-[10px] font-bold text-[#00853D] bg-white px-2 py-0.5 rounded-full border border-emerald-200">
+                  <span className="flex items-center gap-1 text-[10px] font-bold text-[#7C0E5F] bg-white px-2 py-0.5 rounded-full border border-[#E7C4D9]">
                     <CheckCircle className="w-2.5 h-2.5" />
                     {rev.date}
                   </span>
@@ -115,7 +115,7 @@ export default function FnpTestimonials() {
               <div className="pt-3 border-t border-gray-200/60 space-y-1">
                 <p className="text-xs font-bold text-gray-900">{rev.name}</p>
                 <p className="text-[10px] text-gray-500">{rev.city}</p>
-                <p className="text-[10px] text-[#00853D] font-medium line-clamp-1">
+                <p className="text-[10px] text-[#7C0E5F] font-medium line-clamp-1">
                   Item: {rev.product}
                 </p>
               </div>

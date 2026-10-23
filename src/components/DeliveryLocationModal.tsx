@@ -86,7 +86,7 @@ export default function DeliveryLocationModal({
             className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[92vw] max-w-lg bg-white rounded-2xl shadow-2xl z-50 border border-gray-100 overflow-hidden"
           >
             {/* Header */}
-            <div className="bg-[#00853D] text-white px-6 py-4 flex items-center justify-between">
+            <div className="bg-[#7C0E5F] text-white px-6 py-4 flex items-center justify-between">
               <div className="flex items-center gap-2">
                 <MapPin className="w-5 h-5 text-white" />
                 <h3 className="text-base font-bold tracking-tight">Select Delivery Location</h3>
@@ -114,28 +114,28 @@ export default function DeliveryLocationModal({
                       value={pincodeInput}
                       onChange={(e) => setPincodeInput(e.target.value.replace(/\D/g, ""))}
                       placeholder="e.g. 400607, 400001, 110001"
-                      className="w-full pl-9 pr-3 py-2.5 text-sm bg-gray-50 border border-gray-200 rounded-lg outline-none focus:border-[#00853D] focus:bg-white transition"
+                      className="w-full pl-9 pr-3 py-2.5 text-sm bg-gray-50 border border-gray-200 rounded-lg outline-none focus:border-[#7C0E5F] focus:bg-white transition"
                     />
                   </div>
                   <button
                     type="submit"
-                    className="bg-[#00853D] hover:bg-[#006B31] text-white px-5 py-2.5 rounded-lg text-xs font-bold uppercase transition"
+                    className="bg-[#7C0E5F] hover:bg-[#5F0B48] text-white px-5 py-2.5 rounded-lg text-xs font-bold uppercase transition"
                   >
                     Check
                   </button>
                 </form>
 
                 {detectedStatus && (
-                  <p className="mt-2 text-xs font-medium text-[#00853D]">
+                  <p className="mt-2 text-xs font-medium text-[#7C0E5F]">
                     {detectedStatus}
                   </p>
                 )}
               </div>
 
               {/* Current Selection Pill */}
-              <div className="bg-[#EBF7EE] border border-[#B4E3C4] rounded-xl p-3 flex items-center justify-between">
+              <div className="bg-[#FAF3F7] border border-[#E7C4D9] rounded-xl p-3 flex items-center justify-between">
                 <div className="flex items-center gap-2.5">
-                  <span className="w-7 h-7 rounded-full bg-[#00853D] text-white flex items-center justify-center text-xs">
+                  <span className="w-7 h-7 rounded-full bg-[#7C0E5F] text-white flex items-center justify-center text-xs">
                     ✓
                   </span>
                   <div>
@@ -145,7 +145,7 @@ export default function DeliveryLocationModal({
                     </p>
                   </div>
                 </div>
-                <span className="text-[10px] bg-white text-[#00853D] font-bold px-2.5 py-1 rounded-full border border-[#B4E3C4]">
+                <span className="text-[10px] bg-white text-[#7C0E5F] font-bold px-2.5 py-1 rounded-full border border-[#E7C4D9]">
                   Active
                 </span>
               </div>
@@ -156,7 +156,7 @@ export default function DeliveryLocationModal({
                   <h4 className="text-xs font-bold uppercase tracking-wider text-gray-600">
                     Popular Delivery Cities
                   </h4>
-                  <span className="text-[11px] text-[#00853D] font-semibold flex items-center gap-1">
+                  <span className="text-[11px] text-[#7C0E5F] font-semibold flex items-center gap-1">
                     <Sparkles className="w-3 h-3" /> 60 Mins Delivery Available
                   </span>
                 </div>
@@ -170,13 +170,13 @@ export default function DeliveryLocationModal({
                         onClick={() => handleCityClick(c.name, c.pincode)}
                         className={`text-left p-2.5 rounded-xl border text-xs transition flex flex-col justify-between ${
                           isSelected
-                            ? "bg-[#EBF7EE] border-[#00853D] text-[#00853D] font-bold shadow-xs"
-                            : "bg-white border-gray-200 hover:border-[#00853D] hover:bg-gray-50 text-gray-800"
+                            ? "bg-[#FAF3F7] border-[#7C0E5F] text-[#7C0E5F] font-bold shadow-xs"
+                            : "bg-white border-gray-200 hover:border-[#7C0E5F] hover:bg-gray-50 text-gray-800"
                         }`}
                       >
                         <div className="flex items-center justify-between w-full">
                           <span className="font-semibold">{c.name}</span>
-                          {isSelected && <Check className="w-3.5 h-3.5 text-[#00853D]" />}
+                          {isSelected && <Check className="w-3.5 h-3.5 text-[#7C0E5F]" />}
                         </div>
                         <span className="text-[10px] text-gray-500 mt-1 font-normal">
                           {c.tag}

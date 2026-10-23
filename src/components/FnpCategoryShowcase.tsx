@@ -49,7 +49,7 @@ export default function FnpCategoryShowcase({
         {/* Section Header */}
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-3">
           <div>
-            <div className="inline-flex items-center gap-1.5 text-xs font-bold text-[#00853D] uppercase tracking-wider mb-1">
+            <div className="inline-flex items-center gap-1.5 text-xs font-bold text-[#7C0E5F] uppercase tracking-wider mb-1">
               <Sparkles className="w-3.5 h-3.5" />
               <span>{badge}</span>
             </div>
@@ -64,7 +64,7 @@ export default function FnpCategoryShowcase({
           <div className="flex items-center gap-3">
             <button
               onClick={() => onViewAll(category)}
-              className="text-xs font-bold text-[#00853D] hover:underline flex items-center gap-1"
+              className="text-xs font-bold text-[#7C0E5F] hover:underline flex items-center gap-1"
             >
               <span>View All {category}</span>
               <ArrowRight className="w-3.5 h-3.5" />

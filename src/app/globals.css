@@ -1,24 +1,22 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f7f7f7;
+  --background: #ffffff;
   --foreground: #222222;
-  --fnp-green: #00853d;
-  --fnp-green-dark: #006b31;
-  --fnp-green-light: #e8f5e9;
-  --fnp-gold: #e49f2b;
-  --fnp-gold-dark: #c68516;
-  --fnp-gold-light: #fef8eb;
+  --primary-purple: #7C0E5F;
+  --dark-purple: #5F0B48;
+  --light-purple: #A64D8C;
+  --soft-pink: #E7C4D9;
+  --white: #FFFFFF;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-fnp-green: var(--fnp-green);
-  --color-fnp-green-dark: var(--fnp-green-dark);
-  --color-fnp-green-light: var(--fnp-green-light);
-  --color-fnp-gold: var(--fnp-gold);
-  --color-fnp-gold-dark: var(--fnp-gold-dark);
+  --color-primary-purple: #7C0E5F;
+  --color-dark-purple: #5F0B48;
+  --color-light-purple: #A64D8C;
+  --color-soft-pink: #E7C4D9;
   --font-sans: var(--font-plus-jakarta), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
@@ -29,23 +27,23 @@ body {
   overflow-x: hidden;
 }
 
-/* FNP style scrollbars */
+/* JoyNbloom Purple Scrollbars */
 ::-webkit-scrollbar {
   height: 6px;
   width: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: #FAF3F7;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #00853d;
+  background: #7C0E5F;
   border-radius: 9999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #006b31;
+  background: #5F0B48;
 }
 
 /* Hide scrollbar for category strips */

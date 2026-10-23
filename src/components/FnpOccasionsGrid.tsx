@@ -16,7 +16,7 @@ const OCCASIONS = [
     occasion: "Birthday" as ProductOccasion,
     image: "https://cdn.shopify.com/s/files/1/0766/9281/5929/collections/rosy-white-forest-cake-half-kg-eggless_1.webp?v=1783345370",
     badge: "Most Popular",
-    badgeColor: "bg-rose-600",
+    badgeColor: "bg-[#7C0E5F]",
   },
   {
     id: "anniversary",
@@ -25,7 +25,7 @@ const OCCASIONS = [
     occasion: "Anniversary" as ProductOccasion,
     image: "https://cdn.shopify.com/s/files/1/0766/9281/5929/collections/heart-shaped-butterscotch-cake-half-kg_1.jpg?v=1768490658",
     badge: "Couple Special",
-    badgeColor: "bg-amber-600",
+    badgeColor: "bg-[#A64D8C]",
   },
   {
     id: "thankyou",
@@ -34,7 +34,7 @@ const OCCASIONS = [
     occasion: "Thank You" as ProductOccasion,
     image: "https://cdn.shopify.com/s/files/1/0766/9281/5929/files/WhatsAppImage2026-08-10at20.07.14.jpg?v=1791882340",
     badge: "Express Appreciation",
-    badgeColor: "bg-teal-700",
+    badgeColor: "bg-[#5F0B48]",
   },
   {
     id: "loveit",
@@ -43,7 +43,7 @@ const OCCASIONS = [
     occasion: "Love It. Buy" as ProductOccasion,
     image: "https://cdn.shopify.com/s/files/1/0766/9281/5929/collections/personalised-mr-gentleman-valentine-gift-box_1.webp?v=1783345466",
     badge: "Trending Gifts",
-    badgeColor: "bg-indigo-600",
+    badgeColor: "bg-[#7C0E5F]",
   },
 ];
 
@@ -60,7 +60,7 @@ export default function FnpOccasionsGrid({ onSelectOccasion }: FnpOccasionsGridP
         {/* Section Header */}
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-3">
           <div>
-            <div className="flex items-center gap-1.5 text-xs font-bold text-[#00853D] uppercase tracking-wider mb-1">
+            <div className="flex items-center gap-1.5 text-xs font-bold text-[#7C0E5F] uppercase tracking-wider mb-1">
               <Sparkles className="w-3.5 h-3.5" />
               <span>Moments of Joy</span>
             </div>
@@ -99,7 +99,7 @@ export default function FnpOccasionsGrid({ onSelectOccasion }: FnpOccasionsGridP
 
               <div className="p-4 flex flex-col justify-between flex-1 space-y-2">
                 <div>
-                  <h3 className="font-bold text-gray-900 text-sm group-hover:text-[#00853D] transition">
+                  <h3 className="font-bold text-gray-900 text-sm group-hover:text-[#7C0E5F] transition">
                     {item.title}
                   </h3>
                   <p className="text-xs text-gray-500 line-clamp-1 mt-0.5">
@@ -107,7 +107,7 @@ export default function FnpOccasionsGrid({ onSelectOccasion }: FnpOccasionsGridP
                   </p>
                 </div>
 
-                <div className="flex items-center text-xs font-bold text-[#00853D] group-hover:translate-x-1 transition-transform pt-1">
+                <div className="flex items-center text-xs font-bold text-[#7C0E5F] group-hover:translate-x-1 transition-transform pt-1">
                   <span>Explore Collection</span>
                   <ArrowRight className="w-3.5 h-3.5 ml-1" />
                 </div>

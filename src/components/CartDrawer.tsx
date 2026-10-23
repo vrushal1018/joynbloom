@@ -113,12 +113,12 @@ export default function CartDrawer({
             transition={{ type: "spring", damping: 25, stiffness: 200 }}
             className="fixed top-0 right-0 bottom-0 w-full max-w-md bg-white text-gray-900 z-50 shadow-2xl flex flex-col border-l border-gray-200"
           >
-            {/* 1. Header (FNP Emerald Green) */}
-            <div className="p-4 sm:p-5 bg-[#00853D] text-white flex items-center justify-between shadow-xs">
+            {/* 1. Header (JoyNbloom Brand Purple) */}
+            <div className="p-4 sm:p-5 bg-[#7C0E5F] text-white flex items-center justify-between shadow-xs">
               <div>
                 <h3 className="text-base font-bold tracking-tight flex items-center gap-2">
                   <span>Your Celebration Cart</span>
-                  <span className="bg-amber-400 text-gray-900 text-xs font-black px-2 py-0.5 rounded-full">
+                  <span className="bg-[#E7C4D9] text-[#5F0B48] text-xs font-black px-2 py-0.5 rounded-full">
                     {items.reduce((s, i) => s + i.quantity, 0)} items
                   </span>
                 </h3>
@@ -136,12 +136,12 @@ export default function CartDrawer({
             </div>
 
             {/* Same-day Express Notice Bar */}
-            <div className="bg-[#EBF7EE] px-4 py-2 border-b border-[#B4E3C4] flex items-center justify-between text-xs text-[#00853D] font-semibold">
+            <div className="bg-[#FAF3F7] px-4 py-2 border-b border-[#E7C4D9] flex items-center justify-between text-xs text-[#7C0E5F] font-semibold">
               <div className="flex items-center gap-1.5">
-                <Clock className="w-3.5 h-3.5" />
+                <Clock className="w-3.5 h-3.5 text-[#7C0E5F]" />
                 <span>60-Mins Express Delivery Available</span>
               </div>
-              <span className="bg-[#00853D] text-white text-[10px] px-2 py-0.5 rounded font-bold">
+              <span className="bg-[#7C0E5F] text-white text-[10px] px-2 py-0.5 rounded font-bold">
                 FREE CARD NOTE
               </span>
             </div>
@@ -161,7 +161,7 @@ export default function CartDrawer({
                   </div>
                   <button
                     onClick={onClose}
-                    className="bg-[#00853D] hover:bg-[#006B31] text-white px-6 py-2.5 rounded-full font-bold text-xs uppercase shadow-xs transition"
+                    className="bg-[#7C0E5F] hover:bg-[#5F0B48] text-white px-6 py-2.5 rounded-full font-bold text-xs uppercase shadow-xs transition"
                   >
                     Start Shopping
                   </button>
@@ -190,7 +190,7 @@ export default function CartDrawer({
                     <div className="flex-1 flex flex-col justify-between">
                       <div className="flex justify-between items-start gap-2">
                         <div>
-                          <span className="text-[10px] font-bold uppercase text-[#00853D]">
+                          <span className="text-[10px] font-bold uppercase text-[#7C0E5F]">
                             {item.product.category}
                           </span>
                           <h4 className="font-semibold text-xs sm:text-sm text-gray-900 leading-snug line-clamp-2">
@@ -240,11 +240,11 @@ export default function CartDrawer({
                 ))
               )}
 
-              {/* Delivery Slot Selector (FNP Signature) */}
+              {/* Delivery Slot Selector */}
               {items.length > 0 && (
                 <div className="p-3 bg-gray-50 rounded-xl border border-gray-200 space-y-2">
                   <div className="flex items-center gap-1.5 text-xs font-bold text-gray-800">
-                    <Clock className="w-3.5 h-3.5 text-[#00853D]" />
+                    <Clock className="w-3.5 h-3.5 text-[#7C0E5F]" />
                     <span>Select Preferred Delivery Slot</span>
                   </div>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
@@ -254,7 +254,7 @@ export default function CartDrawer({
                         onClick={() => setSelectedSlot(slot)}
                         className={`text-left p-2 rounded-lg text-[11px] border transition ${
                           selectedSlot === slot
-                            ? "bg-[#EBF7EE] border-[#00853D] text-[#00853D] font-bold"
+                            ? "bg-[#FAF3F7] border-[#7C0E5F] text-[#7C0E5F] font-bold"
                             : "bg-white border-gray-200 text-gray-700 hover:border-gray-300"
                         }`}
                       >
@@ -265,15 +265,15 @@ export default function CartDrawer({
                 </div>
               )}
 
-              {/* Free Handwritten Note Input (FNP Signature) */}
+              {/* Free Handwritten Note Input */}
               {items.length > 0 && (
-                <div className="p-3.5 bg-[#FEF8EB] rounded-xl border border-amber-200 space-y-2">
-                  <div className="flex items-center justify-between text-xs font-bold text-amber-900">
+                <div className="p-3.5 bg-[#FAF3F7] rounded-xl border border-[#E7C4D9] space-y-2">
+                  <div className="flex items-center justify-between text-xs font-bold text-[#5F0B48]">
                     <div className="flex items-center gap-1.5">
-                      <FileText className="w-3.5 h-3.5 text-amber-700" />
+                      <FileText className="w-3.5 h-3.5 text-[#7C0E5F]" />
                       <span>Complimentary Handwritten Message Card</span>
                     </div>
-                    <span className="text-[10px] bg-amber-200 text-amber-900 px-1.5 py-0.5 rounded font-bold">
+                    <span className="text-[10px] bg-[#E7C4D9] text-[#5F0B48] px-1.5 py-0.5 rounded font-bold">
                       FREE
                     </span>
                   </div>
@@ -282,9 +282,9 @@ export default function CartDrawer({
                     value={giftNote}
                     onChange={(e) => setGiftNote(e.target.value)}
                     placeholder="E.g., Happy Birthday Dearest Mom! With all our love..."
-                    className="w-full text-xs font-medium px-3 py-2 bg-white rounded-lg border border-amber-300 outline-none focus:border-[#00853D]"
+                    className="w-full text-xs font-medium px-3 py-2 bg-white rounded-lg border border-[#E7C4D9] outline-none focus:border-[#7C0E5F]"
                   />
-                  <p className="text-[10px] text-amber-800 font-medium">
+                  <p className="text-[10px] text-gray-600 font-medium">
                     Our studio florists will neatly handwrite your note on premium embossed paper.
                   </p>
                 </div>
@@ -301,11 +301,11 @@ export default function CartDrawer({
                     value={promoCode}
                     onChange={(e) => setPromoCode(e.target.value)}
                     placeholder="Coupon code (e.g. JOY15)"
-                    className="flex-1 px-3 py-2 text-xs font-bold rounded-lg border border-gray-300 uppercase outline-none focus:border-[#00853D]"
+                    className="flex-1 px-3 py-2 text-xs font-bold rounded-lg border border-gray-300 uppercase outline-none focus:border-[#7C0E5F]"
                   />
                   <button
                     onClick={handleApplyPromo}
-                    className="bg-[#00853D] hover:bg-[#006B31] text-white px-4 py-2 rounded-lg text-xs font-bold uppercase transition"
+                    className="bg-[#7C0E5F] hover:bg-[#5F0B48] text-white px-4 py-2 rounded-lg text-xs font-bold uppercase transition"
                   >
                     Apply
                   </button>
@@ -319,7 +319,7 @@ export default function CartDrawer({
                   </div>
 
                   {isDiscountEligible && (
-                    <div className="flex justify-between text-[#00853D] font-bold">
+                    <div className="flex justify-between text-[#7C0E5F] font-bold">
                       <span className="flex items-center gap-1">
                         <Sparkles className="w-3 h-3" /> Celebration Coupon (JOY15)
                       </span>
@@ -329,14 +329,14 @@ export default function CartDrawer({
 
                   <div className="flex justify-between">
                     <span>PAN India Delivery</span>
-                    <span className="text-[#00853D] font-bold text-[11px] bg-[#EBF7EE] px-2 py-0.5 rounded">
+                    <span className="text-[#7C0E5F] font-bold text-[11px] bg-[#FAF3F7] px-2 py-0.5 rounded">
                       Calculated at checkout
                     </span>
                   </div>
 
                   <div className="pt-2 border-t border-gray-200 flex justify-between items-baseline text-sm font-bold text-gray-900">
                     <span>Total Amount</span>
-                    <span className="text-lg font-black text-[#00853D]">
+                    <span className="text-lg font-black text-[#7C0E5F]">
                       ₹{total.toLocaleString("en-IN")}
                     </span>
                   </div>
@@ -344,7 +344,7 @@ export default function CartDrawer({
 
                 {/* Checkout Notice */}
                 {checkoutNotice && (
-                  <div className="p-2.5 rounded-lg bg-emerald-50 border border-emerald-300 text-xs text-emerald-800 font-semibold text-center">
+                  <div className="p-2.5 rounded-lg bg-[#FAF3F7] border border-[#E7C4D9] text-xs text-[#5F0B48] font-semibold text-center">
                     {checkoutNotice}
                   </div>
                 )}
@@ -353,7 +353,7 @@ export default function CartDrawer({
                 <button
                   onClick={handleCheckout}
                   disabled={isCheckingOut}
-                  className="w-full bg-[#00853D] hover:bg-[#006B31] text-white py-3.5 rounded-xl font-bold text-sm shadow-md transition-all flex items-center justify-center gap-2 active:scale-98 disabled:opacity-50"
+                  className="w-full bg-[#7C0E5F] hover:bg-[#5F0B48] text-white py-3.5 rounded-xl font-bold text-sm shadow-md transition-all flex items-center justify-center gap-2 active:scale-98 disabled:opacity-50"
                 >
                   <ShieldCheck className="w-5 h-5 text-white" />
                   <span>

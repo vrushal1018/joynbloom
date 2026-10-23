@@ -77,12 +77,12 @@ export default function FnpProductCard({
 
         {/* Top Badges */}
         <div className="absolute top-2 left-2 flex flex-col gap-1 z-10">
-          <span className="bg-[#00853D] text-white text-[10px] font-bold px-2 py-0.5 rounded shadow-xs flex items-center gap-1">
+          <span className="bg-[#7C0E5F] text-white text-[10px] font-bold px-2 py-0.5 rounded shadow-xs flex items-center gap-1">
             <Zap className="w-2.5 h-2.5 fill-current" />
             60 MINS
           </span>
           {product.badge && (
-            <span className="bg-amber-500 text-white text-[9px] font-bold px-1.5 py-0.5 rounded shadow-xs">
+            <span className="bg-[#A64D8C] text-white text-[9px] font-bold px-1.5 py-0.5 rounded shadow-xs">
               {product.badge}
             </span>
           )}
@@ -94,12 +94,12 @@ export default function FnpProductCard({
           aria-label={isWishlisted ? "Remove from wishlist" : "Add to wishlist"}
           className={`absolute top-2 right-2 w-8 h-8 rounded-full flex items-center justify-center transition shadow-xs z-10 ${
             isWishlisted
-              ? "bg-rose-50 text-rose-600"
-              : "bg-white/80 hover:bg-white text-gray-500 hover:text-rose-500"
+              ? "bg-[#E7C4D9]/40 text-[#7C0E5F]"
+              : "bg-white/80 hover:bg-white text-gray-500 hover:text-[#7C0E5F]"
           }`}
         >
           <Heart
-            className={`w-4 h-4 ${isWishlisted ? "fill-rose-600 text-rose-600" : ""}`}
+            className={`w-4 h-4 ${isWishlisted ? "fill-[#7C0E5F] text-[#7C0E5F]" : ""}`}
           />
         </button>
 
@@ -111,12 +111,12 @@ export default function FnpProductCard({
         </div>
       </div>
 
-      {/* 2. Content Details (Exact FNP Typography & Metrics) */}
+      {/* 2. Content Details */}
       <div className="p-3.5 flex flex-col flex-1 justify-between gap-3">
         <div className="space-y-1.5">
           {/* Rating Pill & Review Count */}
           <div className="flex items-center gap-1.5">
-            <span className="inline-flex items-center gap-1 bg-[#00853D] text-white text-[10px] font-black px-1.5 py-0.5 rounded">
+            <span className="inline-flex items-center gap-1 bg-[#7C0E5F] text-white text-[10px] font-black px-1.5 py-0.5 rounded">
               <span>{product.rating.toFixed(1)}</span>
               <Star className="w-2.5 h-2.5 fill-white" />
             </span>
@@ -126,7 +126,7 @@ export default function FnpProductCard({
           </div>
 
           {/* Product Title */}
-          <h3 className="text-xs sm:text-sm font-semibold text-gray-800 line-clamp-2 group-hover:text-[#00853D] transition leading-snug">
+          <h3 className="text-xs sm:text-sm font-semibold text-gray-800 line-clamp-2 group-hover:text-[#7C0E5F] transition leading-snug">
             {product.name}
           </h3>
 
@@ -141,15 +141,15 @@ export default function FnpProductCard({
               </span>
             )}
             {discountPercent && discountPercent > 0 && (
-              <span className="text-[11px] font-bold text-[#00853D]">
+              <span className="text-[11px] font-bold text-[#7C0E5F]">
                 {discountPercent}% OFF
               </span>
             )}
           </div>
 
-          {/* Earliest Delivery Info (FNP Signature) */}
+          {/* Earliest Delivery Info */}
           <div className="flex items-center gap-1 text-[11px] text-gray-500 font-medium pt-0.5">
-            <Clock className="w-3 h-3 text-[#00853D]" />
+            <Clock className="w-3.5 h-3.5 text-[#7C0E5F]" />
             <span>Earliest Delivery: <strong className="text-gray-700">Today</strong></span>
           </div>
         </div>
@@ -160,8 +160,8 @@ export default function FnpProductCard({
             onClick={handleAdd}
             className={`py-2 px-2 rounded-lg text-xs font-bold transition flex items-center justify-center gap-1 border ${
               isAdded
-                ? "bg-[#EBF7EE] text-[#00853D] border-[#00853D]"
-                : "bg-white text-[#00853D] border-[#00853D] hover:bg-[#EBF7EE]"
+                ? "bg-[#E7C4D9]/40 text-[#7C0E5F] border-[#7C0E5F]"
+                : "bg-white text-[#7C0E5F] border-[#7C0E5F] hover:bg-[#E7C4D9]/20"
             }`}
           >
             {isAdded ? (
@@ -180,7 +180,7 @@ export default function FnpProductCard({
           <button
             onClick={handleInstantBuy}
             disabled={isBuying}
-            className="py-2 px-2 rounded-lg text-xs font-bold bg-[#00853D] hover:bg-[#006B31] text-white transition flex items-center justify-center gap-1 shadow-xs"
+            className="py-2 px-2 rounded-lg text-xs font-bold bg-[#7C0E5F] hover:bg-[#5F0B48] text-white transition flex items-center justify-center gap-1 shadow-xs"
           >
             <span>{isBuying ? "Connecting..." : "Buy Now"}</span>
           </button>

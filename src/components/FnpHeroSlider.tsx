@@ -14,54 +14,54 @@ const SLIDES = [
   {
     id: 1,
     tag: "⚡ 60-MINS EXPRESS DELIVERY",
-    tagColor: "bg-emerald-600",
+    tagColor: "bg-[#7C0E5F]",
     title: "Fresh Blooms & Designer Cakes",
     subtitle: "Hand-tied daily farm-fresh flowers & 100% freshly baked eggless cakes delivered with love to their doorstep.",
     cta: "Order Flowers & Cakes",
     category: "Flowers",
     badge: "Thane & Mumbai 60-Min Rush Delivery",
     image: "https://cdn.shopify.com/s/files/1/0766/9281/5929/files/WhatsAppImage2026-08-10at20.07.14.jpg?v=1791882340",
-    accent: "#00853D",
-    gradient: "from-[#004B22] via-[#005B2A] to-transparent",
+    accent: "#7C0E5F",
+    gradient: "from-[#5F0B48] via-[#7C0E5F]/90 to-transparent",
   },
   {
     id: 2,
     tag: "👑 JOY LUXE COLLECTION",
-    tagColor: "bg-amber-600",
+    tagColor: "bg-[#A64D8C]",
     title: "Luxury Floral Vases & Exotics",
     subtitle: "Artisanal Dutch roses, vibrant lilies and royal orchids arranged in handcrafted imported glass vases.",
     cta: "Explore Luxe Collection",
     category: "Flowers",
     badge: "Handcrafted For Milestone Celebrations",
     image: "https://cdn.shopify.com/s/files/1/0766/9281/5929/files/luxury-red-rose-grand-vase-arrangement_1.jpg?v=1770544299",
-    accent: "#E49F2B",
-    gradient: "from-[#422006] via-[#78350F] to-transparent",
+    accent: "#A64D8C",
+    gradient: "from-[#5F0B48] via-[#7C0E5F]/85 to-transparent",
   },
   {
     id: 3,
     tag: "🎂 CELEBRATE SPECIAL MOMENTS",
-    tagColor: "bg-rose-600",
+    tagColor: "bg-[#7C0E5F]",
     title: "Birthday & Anniversary Hampers",
     subtitle: "From heart-shaped truffle cakes to customized hampers, make every anniversary and birthday unforgettable.",
     cta: "Shop Celebration Cakes",
     category: "Cakes",
     badge: "100% Hygienic & Eggless Options",
     image: "https://cdn.shopify.com/s/files/1/0766/9281/5929/collections/heart-shaped-butterscotch-cake-half-kg_1.jpg?v=1768490658",
-    accent: "#E11D48",
-    gradient: "from-[#881337] via-[#9F1239] to-transparent",
+    accent: "#7C0E5F",
+    gradient: "from-[#5F0B48] via-[#7C0E5F]/90 to-transparent",
   },
   {
     id: 4,
     tag: "🌿 SERENE INDOOR GREENERY",
-    tagColor: "bg-teal-700",
+    tagColor: "bg-[#A64D8C]",
     title: "Air-Purifying Plants & Good Luck",
     subtitle: "Serene 2-tier Lucky Bamboo, jade plants and desktop green companions to bring peace and prosperity.",
     cta: "Shop Green Plants",
     category: "Plants",
     badge: "Same-Day & PAN India Courier",
     image: "https://cdn.shopify.com/s/files/1/0766/9281/5929/collections/serene-charm-lucky-bamboo_1.webp?v=1768490690",
-    accent: "#0D9488",
-    gradient: "from-[#134E4A] via-[#115E59] to-transparent",
+    accent: "#A64D8C",
+    gradient: "from-[#5F0B48] via-[#7C0E5F]/85 to-transparent",
   },
 ];
 
@@ -92,7 +92,7 @@ export default function FnpHeroSlider({
 
   return (
     <section
-      className="relative bg-[#004B22] overflow-hidden"
+      className="relative bg-[#5F0B48] overflow-hidden"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -116,7 +116,7 @@ export default function FnpHeroSlider({
                 sizes="100vw"
                 className="object-cover object-center md:object-right"
               />
-              {/* Gradient Mask for Readability (FNP Style) */}
+              {/* Gradient Mask for Readability */}
               <div
                 className={`absolute inset-0 bg-gradient-to-r ${slide.gradient} md:w-3/4`}
               />
@@ -132,7 +132,7 @@ export default function FnpHeroSlider({
                 className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold text-white shadow-sm"
                 style={{ backgroundColor: slide.accent }}
               >
-                <Sparkles className="w-3.5 h-3.5" />
+                <Sparkles className="w-3.5 h-3.5 text-[#E7C4D9]" />
                 <span>{slide.tag}</span>
               </motion.div>
 
@@ -162,11 +162,11 @@ export default function FnpHeroSlider({
                 className="flex flex-wrap items-center gap-3 pt-1 text-xs"
               >
                 <span className="flex items-center gap-1.5 bg-black/40 backdrop-blur-xs px-3 py-1 rounded-full border border-white/20 text-white font-semibold">
-                  <Clock className="w-3.5 h-3.5 text-amber-400" />
+                  <Clock className="w-3.5 h-3.5 text-[#E7C4D9]" />
                   <span>{slide.badge}</span>
                 </span>
                 <span className="hidden sm:flex items-center gap-1.5 bg-black/40 backdrop-blur-xs px-3 py-1 rounded-full border border-white/20 text-white font-semibold">
-                  <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
+                  <ShieldCheck className="w-3.5 h-3.5 text-[#E7C4D9]" />
                   <span>100% Smile Guaranteed</span>
                 </span>
               </motion.div>
@@ -184,7 +184,7 @@ export default function FnpHeroSlider({
                     const el = document.getElementById("products-section");
                     el?.scrollIntoView({ behavior: "smooth" });
                   }}
-                  className="bg-[#00853D] hover:bg-[#006B31] text-white font-bold text-xs sm:text-sm px-6 py-3 rounded-full flex items-center gap-2 shadow-lg transition-transform hover:scale-105"
+                  className="bg-[#7C0E5F] hover:bg-[#5F0B48] text-white font-bold text-xs sm:text-sm px-6 py-3 rounded-full flex items-center gap-2 shadow-lg transition-transform hover:scale-105 border border-white/20"
                 >
                   <span>{slide.cta}</span>
                   <ArrowRight className="w-4 h-4" />
@@ -226,7 +226,7 @@ export default function FnpHeroSlider({
               aria-label={`Go to slide ${idx + 1}`}
               className={`h-2 rounded-full transition-all duration-300 ${
                 idx === currentSlide
-                  ? "w-8 bg-[#00853D] ring-2 ring-white"
+                  ? "w-8 bg-[#E7C4D9] ring-2 ring-white"
                   : "w-2 bg-white/60 hover:bg-white"
               }`}
             />

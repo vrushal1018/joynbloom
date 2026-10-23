@@ -44,16 +44,16 @@ export default function FnpFooter({
   };
 
   return (
-    <footer className="bg-[#1C241E] text-gray-300 text-xs border-t border-gray-800" id="footer">
-      {/* 1. Newsletter Strip (FNP Signature) */}
-      <div className="bg-[#005B2A] py-8 px-4 md:px-8 text-white">
+    <footer className="bg-[#240A1E] text-gray-300 text-xs border-t border-[#3B0F32]" id="footer">
+      {/* 1. Newsletter Strip */}
+      <div className="bg-[#5F0B48] py-8 px-4 md:px-8 text-white border-b border-[#4A0838]">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="space-y-1 text-center md:text-left">
             <h3 className="text-xl sm:text-2xl font-black tracking-tight">
               Get ₹150 OFF On Your First Celebration Order
             </h3>
-            <p className="text-xs text-white/80 font-medium">
-              Join 50,000+ subscribers for secret discounts, anniversary reminders &amp; festive deals. Use Code: <strong>JOY15</strong>
+            <p className="text-xs text-[#E7C4D9] font-medium">
+              Join 50,000+ subscribers for secret discounts, anniversary reminders &amp; festive deals. Use Code: <strong className="text-white">JOY15</strong>
             </p>
           </div>
 
@@ -66,12 +66,12 @@ export default function FnpFooter({
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Enter your email address..."
-                className="w-full bg-white text-gray-900 text-xs pl-10 pr-3 py-3 rounded-full outline-none focus:ring-2 focus:ring-amber-400 transition"
+                className="w-full bg-white text-gray-900 text-xs pl-10 pr-3 py-3 rounded-full outline-none focus:ring-2 focus:ring-[#E7C4D9] transition"
               />
             </div>
             <button
               type="submit"
-              className="bg-[#E49F2B] hover:bg-[#c68516] text-black font-extrabold text-xs px-6 py-3 rounded-full shrink-0 transition"
+              className="bg-[#7C0E5F] hover:bg-[#A64D8C] text-white font-extrabold text-xs px-6 py-3 rounded-full shrink-0 transition border border-[#E7C4D9]/40 shadow-xs"
             >
               {subscribed ? "Subscribed! 🎉" : "Subscribe"}
             </button>
@@ -85,7 +85,7 @@ export default function FnpFooter({
           {/* Brand info */}
           <div className="space-y-3.5 sm:col-span-2 md:col-span-1 lg:col-span-1">
             <div className="flex items-center gap-2">
-              <div className="w-8 h-8 rounded-xl bg-[#00853D] flex items-center justify-center text-white text-lg">
+              <div className="w-8 h-8 rounded-xl bg-[#7C0E5F] flex items-center justify-center text-white text-lg">
                 🌸
               </div>
               <span className="text-xl font-black text-white">JoyNbloom</span>
@@ -95,11 +95,11 @@ export default function FnpFooter({
             </p>
             <div className="pt-1 space-y-1.5 text-gray-400 text-[11px]">
               <div className="flex items-center gap-2">
-                <MapPin className="w-3.5 h-3.5 text-[#00853D] shrink-0" />
+                <MapPin className="w-3.5 h-3.5 text-[#A64D8C] shrink-0" />
                 <span>Thane West, Hiranandani Estate, Mumbai 400607</span>
               </div>
               <div className="flex items-center gap-2">
-                <Phone className="w-3.5 h-3.5 text-[#00853D] shrink-0" />
+                <Phone className="w-3.5 h-3.5 text-[#A64D8C] shrink-0" />
                 <span>+91 98330 00000 (8 AM – 11 PM)</span>
               </div>
             </div>
@@ -234,7 +234,7 @@ export default function FnpFooter({
                 </button>
               </li>
               <li>
-                <button onClick={onOpenShopifyModal} className="hover:text-[#E49F2B] font-bold transition flex items-center gap-1">
+                <button onClick={onOpenShopifyModal} className="hover:text-[#E7C4D9] font-bold transition flex items-center gap-1">
                   <Store className="w-3 h-3" />
                   <span>Shopify Storefront Manager</span>
                 </button>
@@ -243,7 +243,7 @@ export default function FnpFooter({
           </div>
         </div>
 
-        {/* 3. Delivery Cities Strip (FNP Signature) */}
+        {/* 3. Delivery Cities Strip */}
         <div className="pt-8 border-t border-gray-800 space-y-2">
           <span className="text-[11px] font-bold text-gray-400 uppercase tracking-wider block">
             Popular Delivery Locations in India:
@@ -256,12 +256,12 @@ export default function FnpFooter({
         {/* 4. Bottom Payment Icons & Copyright */}
         <div className="pt-8 border-t border-gray-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-gray-500">
           <div>
-            &copy; 2026 JoyNbloom India. All Rights Reserved. Exact FNP-Class Experience.
+            &copy; 2026 JoyNbloom India. All Rights Reserved. Premium Celebration Experience.
           </div>
 
           <div className="flex items-center gap-3">
-            <div className="flex items-center gap-1.5 bg-gray-900 border border-gray-800 px-3 py-1.5 rounded-lg text-gray-300 font-semibold">
-              <ShieldCheck className="w-3.5 h-3.5 text-[#00853D]" />
+            <div className="flex items-center gap-1.5 bg-[#180514] border border-[#3B0F32] px-3 py-1.5 rounded-lg text-gray-300 font-semibold">
+              <ShieldCheck className="w-3.5 h-3.5 text-[#A64D8C]" />
               <span>Shopify PCI-DSS 256-Bit Encrypted</span>
             </div>
             <span className="text-gray-400 font-medium">

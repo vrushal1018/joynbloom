@@ -218,18 +218,19 @@ export default function FnpHeader({
             </button>
 
             {/* Brand Logo */}
-            <a href="#" className="flex items-center gap-2 group">
-              <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-[#7C0E5F] to-[#A64D8C] flex items-center justify-center text-white shadow-sm group-hover:scale-105 transition-transform">
-                <span className="text-xl">🌸</span>
-              </div>
-              <div className="flex flex-col">
-                <span className="text-2xl font-black tracking-tight text-[#7C0E5F] leading-none">
-                  JoyNbloom
-                </span>
-                <span className="text-[9px] uppercase tracking-widest font-bold text-[#A64D8C] leading-tight">
-                  Celebrations &amp; Gifts
-                </span>
-              </div>
+            <a
+              href="#"
+              className="flex items-center group py-0.5 shrink-0"
+              aria-label="JoyNbloom - Your Celebration Partner"
+            >
+              <Image
+                src="/images/joynbloom-logo.jpeg"
+                alt="JoyNbloom - Your Celebration Partner"
+                width={150}
+                height={120}
+                priority
+                className="h-11 sm:h-12 md:h-13 w-auto object-contain transition-transform duration-200 group-hover:scale-105"
+              />
             </a>
           </div>
 
@@ -564,11 +565,16 @@ export default function FnpHeader({
             >
               <div className="space-y-5">
                 <div className="flex items-center justify-between border-b border-gray-100 pb-3">
-                  <div className="flex items-center gap-2">
-                    <span className="text-xl">🌸</span>
-                    <span className="text-xl font-black text-[#7C0E5F]">JoyNbloom</span>
+                  <div className="flex items-center">
+                    <Image
+                      src="/images/joynbloom-logo.jpeg"
+                      alt="JoyNbloom - Your Celebration Partner"
+                      width={140}
+                      height={112}
+                      className="h-11 w-auto object-contain"
+                    />
                   </div>
-                  <button onClick={() => setMobileMenuOpen(false)}>
+                  <button onClick={() => setMobileMenuOpen(false)} aria-label="Close navigation menu">
                     <X className="w-5 h-5 text-gray-500" />
                   </button>
                 </div>

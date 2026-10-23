@@ -28,10 +28,22 @@ export const metadata: Metadata = {
     "Mumbai gift delivery",
     "PAN India celebration delivery",
   ],
+  icons: {
+    icon: "/images/joynbloom-logo.jpeg",
+    shortcut: "/images/joynbloom-logo.jpeg",
+    apple: "/images/joynbloom-logo.jpeg",
+  },
   openGraph: {
     title: "JoyNbloom — Celebration Partner for Flowers, Cakes & Gifts",
     description: "Flowers, customised cakes, and premium gift hampers with same-day & PAN India delivery.",
-    images: ["https://cdn.shopify.com/s/files/1/0766/9281/5929/files/images.png?v=1770381669"],
+    images: [
+      {
+        url: "/images/joynbloom-logo.jpeg",
+        width: 1401,
+        height: 1123,
+        alt: "JoyNbloom - Your Celebration Partner",
+      },
+    ],
   },
 };
 

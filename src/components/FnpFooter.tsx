@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Mail, Phone, MapPin, ShieldCheck, Heart, ArrowRight, Store } from "lucide-react";
 import confetti from "canvas-confetti";
+import Image from "next/image";
 
 interface FnpFooterProps {
   onOpenPolicy: (policy: "shipping" | "refund" | "terms" | "privacy") => void;
@@ -84,11 +85,14 @@ export default function FnpFooter({
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
           {/* Brand info */}
           <div className="space-y-3.5 sm:col-span-2 md:col-span-1 lg:col-span-1">
-            <div className="flex items-center gap-2">
-              <div className="w-8 h-8 rounded-xl bg-[#7C0E5F] flex items-center justify-center text-white text-lg">
-                🌸
-              </div>
-              <span className="text-xl font-black text-white">JoyNbloom</span>
+            <div className="inline-block bg-white p-2.5 rounded-2xl shadow-xs hover:shadow-md transition">
+              <Image
+                src="/images/joynbloom-logo.jpeg"
+                alt="JoyNbloom - Your Celebration Partner"
+                width={150}
+                height={120}
+                className="h-12 w-auto object-contain"
+              />
             </div>
             <p className="text-gray-400 text-xs leading-relaxed">
               India&apos;s preferred online flower &amp; celebration gift shop. Fresh farm flowers, 100% eggless artisan cakes, and curated hampers delivered with heartfelt love.
